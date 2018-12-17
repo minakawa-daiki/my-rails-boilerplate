@@ -27,7 +27,7 @@ class Hello extends React.Component<HelloProps, HelloState> {
   }
 
   render() {
-    return <>Title: {this.props.hello.title}</>;
+    return <><h1>Title: {this.props.hello.title}</h1></>;
   }
 }
 
