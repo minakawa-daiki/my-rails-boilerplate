@@ -1,5 +1,8 @@
 class HomeController < ApplicationController
   def index
-    render component: 'Hello', props: { title: 'hello!' }, tag: 'span', class: 'hello'
+    respond_to do |format|
+      format.html
+      format.json
+    end
   end
 end
