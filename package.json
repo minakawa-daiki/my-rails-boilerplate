@@ -2,7 +2,7 @@
   "name": "app",
   "private": true,
   "scripts": {
-    "prettier": "prettier --write ./app/javascript/components/**/*.{ts,tsx}"
+    "prettier": "prettier --write ./app/javascript/src/{js,scss}/**/*.{ts,tsx,scss}"
   },
   "dependencies": {
     "@rails/webpacker": "3.5",
