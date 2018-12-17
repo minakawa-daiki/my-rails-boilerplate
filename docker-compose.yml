@@ -1,13 +1,13 @@
 version: "3"
 services:
   db:
-    image: mysql:5.7
-    environment:
-      MYSQL_ALLOW_EMPTY_PASSWORD: 'yes'
+    image: postgres
     ports:
-      - '3306:3306'
+      - 5432:5432
+    environment:
+      POSTGRES_PASSWORD: password
     volumes:
-      - mysql:/var/lib/mysql
+      - pgsql:/var/lib/pgsql
   web:
     build:
       context: .
@@ -19,10 +19,11 @@ services:
       - bundle:/usr/local/bundle
     ports:
       - "3000:3000"
+      - "3035:3035"
     depends_on:
       - db
     stdin_open: true
     tty: true
 volumes:
-  mysql:
+  pgsql:
   bundle:
