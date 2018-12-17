@@ -1,24 +1,15 @@
 # README
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+## Server Start
+- docker-compose up
+- docker-compose exec web bin/webpack-dev-server
 
-Things you may want to cover:
+## Prettier
+- docker-compose exec --rm web yarn run prettier
 
-* Ruby version
+## RuboCop
+- docker-compose --rm web web rubocop -c .rubocop.yml
 
-* System dependencies
-
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+## TODO
+- CircleCI
+- Test
